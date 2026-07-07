@@ -4,7 +4,7 @@ const photographyProjects = {
     year: "2025",
     location: "Japan",
     images: [
-      "./assets/images/photography/thegreen/Japan.png",
+      "./assets/images/photography/thegreen/Japan.webp",
       "./assets/images/photography/thegreen/b2.png",
       "./assets/images/photography/thegreen/b3.png",
       "./assets/images/photography/thegreen/b5.png",
