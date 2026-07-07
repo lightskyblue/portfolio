@@ -5,11 +5,11 @@ const photographyProjects = {
     location: "Japan",
     images: [
       "./assets/images/photography/thegreen/Japan.webp",
-      "./assets/images/photography/thegreen/b2.png",
-      "./assets/images/photography/thegreen/b3.png",
-      "./assets/images/photography/thegreen/b5.png",
-      "./assets/images/photography/thegreen/b6.png",
-      "./assets/images/photography/thegreen/b4.png",
+      "./assets/images/photography/thegreen/b2.webp",
+      "./assets/images/photography/thegreen/b3.webp",
+      "./assets/images/photography/thegreen/b5.webp",
+      "./assets/images/photography/thegreen/b6.webp",
+      "./assets/images/photography/thegreen/b4.webp",
     ]
   },
 
@@ -18,11 +18,11 @@ const photographyProjects = {
     year: "2024",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/graduation/Portrait.png",
-      "./assets/images/photography/graduation/p1.png",
-      "./assets/images/photography/graduation/p4.png",
-      "./assets/images/photography/graduation/p2.png",
-      "./assets/images/photography/graduation/p3.png"
+      "./assets/images/photography/graduation/Portrait.webp",
+      "./assets/images/photography/graduation/p1.webp",
+      "./assets/images/photography/graduation/p4.webp",
+      "./assets/images/photography/graduation/p2.webp",
+      "./assets/images/photography/graduation/p3.webp"
     ]
   },
 
@@ -31,12 +31,12 @@ const photographyProjects = {
     year: "2024",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/starry/Starry Night.png",
-      "./assets/images/photography/starry/SN2.gif",
-      "./assets/images/photography/starry/SN3.gif",
-      "./assets/images/photography/starry/SN4.gif",
-      "./assets/images/photography/starry/SN5.gif",
-      "./assets/images/photography/starry/SN6.gif"
+      "./assets/images/photography/starry/Starry Night.webp",
+      "./assets/images/photography/starry/SN2.webp",
+      "./assets/images/photography/starry/SN3.webp",
+      "./assets/images/photography/starry/SN4.webp",
+      "./assets/images/photography/starry/SN5.webp",
+      "./assets/images/photography/starry/SN6.webp"
     ]
   },
 
@@ -58,11 +58,11 @@ const photographyProjects = {
     year: "2026",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/wander/w1.jpg",
-      "./assets/images/photography/wander/w2.jpg",
-      "./assets/images/photography/wander/w3.jpg",
-      "./assets/images/photography/wander/w4.jpg",
-      "./assets/images/photography/wander/w5.jpg"
+      "./assets/images/photography/wander/w1.webp",
+      "./assets/images/photography/wander/w2.webp",
+      "./assets/images/photography/wander/w3.webp",
+      "./assets/images/photography/wander/w4.webp",
+      "./assets/images/photography/wander/w5.webp"
     ]
   },
 
@@ -71,10 +71,10 @@ const photographyProjects = {
     year: "2026",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/night/n.png",
-      "./assets/images/photography/night/n2.png",
-      "./assets/images/photography/night/n3.png",
-      "./assets/images/photography/night/n4.png"
+      "./assets/images/photography/night/n.webp",
+      "./assets/images/photography/night/n2.webp",
+      "./assets/images/photography/night/n3.webp",
+      "./assets/images/photography/night/n4.webp"
     ]
   },
 
@@ -83,12 +83,12 @@ const photographyProjects = {
     year: "2026",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/falling/f1.jpg",
-      "./assets/images/photography/falling/f2.jpg",
-      "./assets/images/photography/falling/f3.jpg",
-      "./assets/images/photography/falling/f4.png",
-      "./assets/images/photography/falling/f5.jpg",
-      "./assets/images/photography/falling/f6.jpg",
+      "./assets/images/photography/falling/f1.webp",
+      "./assets/images/photography/falling/f2.webp",
+      "./assets/images/photography/falling/f3.webp",
+      "./assets/images/photography/falling/f4.webp",
+      "./assets/images/photography/falling/f5.webp",
+      "./assets/images/photography/falling/f6.webp",
     ]
   }
 };
