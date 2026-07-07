@@ -46,7 +46,7 @@ const photographyProjects = {
     location: "Brisbane",
     images: [
       "./assets/images/photography/jumping/friends.png",
-      "./assets/images/photography/jumping/Jumpoveryourfear.jpg",
+      "./assets/images/photography/jumping/Jumpoveryourfear.webp",
       "./assets/images/photography/jumping/Holdyourbalance.png",
       "./assets/images/photography/jumping/Keepyourpace.png",
       "./assets/images/photography/jumping/Beyondyouredge.png"
