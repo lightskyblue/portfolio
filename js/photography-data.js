@@ -45,11 +45,11 @@ const photographyProjects = {
     year: "2025",
     location: "Brisbane",
     images: [
-      "./assets/images/photography/jumping/friends.png",
-      "./assets/images/photography/jumping/Jumpoveryourfear.jpg",
-      "./assets/images/photography/jumping/Holdyourbalance.png",
-      "./assets/images/photography/jumping/Keepyourpace.png",
-      "./assets/images/photography/jumping/Beyondyouredge.png"
+      "./assets/images/photography/jumping/friends.webp",
+      "./assets/images/photography/jumping/Jumpoveryourfear.webp",
+      "./assets/images/photography/jumping/Holdyourbalance.webp",
+      "./assets/images/photography/jumping/Keepyourpace.webp",
+      "./assets/images/photography/jumping/Beyondyouredge.webp"
     ]
   },
 
