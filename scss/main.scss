@@ -1,0 +1,28 @@
+/* ================================
+   Main SCSS Entry
+   这个文件只负责汇总，不建议直接在这里写大量样式。
+   编译后输出到：css/main.css
+================================ */
+
+@use "abstracts/variables";
+
+@use "base/reset";
+@use "base/base";
+
+@use "layout/header";
+
+@use "components/contact-button";
+@use "components/page-transition";
+@use "components/footer";
+@use "components/reveal";
+@use "components/backtotop";
+
+@use "pages/home";
+@use "pages/uxui";
+@use "pages/graphicdesign";
+@use "pages/photography";
+@use "pages/antenna-u";
+@use "pages/shallwecook";
+@use "pages/aquaventure";
+@use "pages/studybuddy";
+@use "pages/photography-detail";

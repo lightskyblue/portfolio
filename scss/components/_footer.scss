@@ -1,0 +1,129 @@
+.site-footer {
+  position: relative;
+  z-index: 1;
+
+  min-height: 72vh;
+  margin-top: calc(var(--grid-size) * 2.5);
+  padding: calc(var(--grid-size) * 1.4) calc(var(--grid-size) * 1.2);
+
+  color: var(--color-bg);
+  background-color: var(--color-blue);
+
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(247, 241, 228, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 241, 228, 0.18) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+
+  min-height: calc(72vh - var(--grid-size) * 2.8);
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr auto;
+  column-gap: calc(var(--grid-size) * 2);
+}
+
+.footer-left {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: calc(var(--grid-size) * 1.2);
+}
+
+.footer-right {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: start;
+  justify-self: end;
+
+  width: min(420px, 100%);
+  padding-top: calc(var(--grid-size) * 0.8);
+}
+
+.footer-label {
+  margin: 0 0 calc(var(--grid-size) * 0.45);
+
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  line-height: 1;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--grid-size) * 0.15);
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+
+  width: fit-content;
+
+  font-size: clamp(1.5rem, 2.2vw, 2.6rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--color-bg);
+  opacity: 0.86;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.footer-socials a:hover {
+  transform: translateX(8px);
+  opacity: 1;
+}
+
+.footer-socials span {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+.footer-copy {
+  margin: 0;
+
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.footer-title {
+  margin: 0;
+
+  max-width: 11ch;
+
+  font-size: clamp(4rem, 11vw, 13rem);
+  line-height: 0.86;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: var(--color-bg);
+}

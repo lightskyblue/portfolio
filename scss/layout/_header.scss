@@ -1,0 +1,50 @@
+/* ================================
+   Header
+   全站共用顶部区域：logo 与右上角 contact button 容器
+================================ */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 30;
+  width: 100%;
+  height: calc(var(--grid-size) * 2.5);
+  pointer-events: none;
+}
+
+.site-logo {
+  position: absolute;
+  top: calc(var(--grid-size) * 1.35);
+  left: calc(var(--grid-size) * 1.05);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text);
+  font-size: calc(var(--grid-size) * 0.48);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    height: calc(var(--grid-size) * 3.2);
+  }
+
+  .site-logo {
+    top: calc(var(--grid-size) * 1.2);
+    left: var(--grid-size);
+    font-size: calc(var(--grid-size) * 0.38);
+  }
+}
+
+@media (max-width: 560px) {
+  .site-logo {
+    left: var(--grid-size);
+  }
+}

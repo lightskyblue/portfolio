@@ -1,0 +1,455 @@
+// ======================================================
+// Antenna U Project Page
+// ======================================================
+@use "../abstracts/variables" as *;
+
+.antenna-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 0 96px;
+  background-color: #f7f3e8;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #111;
+}
+
+// ------------------------------
+// Shared layout system
+// ------------------------------
+
+.antenna-hero,
+.antenna-intro,
+.antenna-storyboard,
+.antenna-ux,
+.antenna-results {
+  width: min(72vw, 880px);
+  margin: 0 auto;
+}
+
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.antenna-section-label {
+  margin-top: 64px;
+  h2 {
+    margin: 0 0 12px;
+    font-size: $font-size-body;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: 1.65;
+  }
+}
+
+// ------------------------------
+// Hero
+// ------------------------------
+
+.antenna-hero {
+  padding-top: 24px;
+}
+
+.antenna-heading {
+  margin-bottom: 64px;
+
+  h1 {
+    margin: 0 0 20px;
+    color: #263cff;
+    font-size: $font-size-display;
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+}
+
+.antenna-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px 12vw;
+  column-gap: 72px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.antenna-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.antenna-meta__label {
+  display: block;
+  font-size: $font-size-meta;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(17, 17, 17, 0.6);
+  text-transform: uppercase;
+}
+
+.antenna-meta__value {
+  display: block;
+  font-size: $font-size-meta;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #000;
+}
+
+.antenna-meta__item--years {
+  align-items: flex-start;
+}
+
+// ------------------------------
+// Intro
+// ------------------------------
+
+.antenna-intro {
+  margin-top: 64px;
+  gap: 72px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.antenna-text-block {
+  h2 {
+    margin: 0 0 12px;
+    font-size: $font-size-body;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: 1.65;
+  }
+}
+
+// ------------------------------
+// Storyboard
+// ------------------------------
+
+.antenna-storyboard {
+  width: min(72vw, 72vh);
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.antenna-storyboard figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #b3b3b3;
+}
+
+.antenna-storyboard img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+// ------------------------------
+// UX Design
+// ------------------------------
+
+.antenna-ux {
+  margin-top: 64px;
+}
+
+.antenna-ux-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.antenna-ux-grid-2 {
+  display: grid;
+  margin-top: 64px;
+  gap: 28px;
+  figure {
+    margin: 0;
+    width: 70%;
+    justify-self: center;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+// ------------------------------
+// Results / Exhibition
+// ------------------------------
+
+.antenna-results {
+  margin-top: 64px;
+}
+
+// ------------------------------
+// Exhibition collage
+// ------------------------------
+
+.antenna-exhibition {
+  width: min(92vw, 1120px);
+  margin: 48px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.antenna-exhibition-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 320px 320px;
+  gap: 18px;
+}
+
+.antenna-exhibition-grid figure {
+  margin: 0;
+  overflow: hidden;
+  background: #b3b3b3;
+}
+
+.antenna-exhibition-grid figure:nth-child(1) {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.antenna-exhibition-grid figure:nth-child(2) {
+  grid-column: 4 / span 6;
+  grid-row: 1;
+}
+
+.antenna-exhibition-grid figure:nth-child(3) {
+  grid-column: 10 / span 3;
+  grid-row: 1;
+}
+
+.antenna-exhibition-grid figure:nth-child(4) {
+  grid-column: 1 / span 7;
+  grid-row: 2;
+}
+
+.antenna-exhibition-grid figure:nth-child(5) {
+  grid-column: 8 / span 5;
+  grid-row: 2;
+}
+
+.antenna-exhibition-grid img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.antenna-exhibition-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 4px;
+}
+
+.antenna-exhibition-title span {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 4.5rem;
+  line-height: 0.78;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  color: #111;
+}
+
+// ------------------------------
+// Responsive
+// ------------------------------
+
+@media (max-width: 900px) {
+  .antenna-hero,
+  .antenna-intro,
+  .antenna-storyboard,
+  .antenna-ux,
+  .antenna-results {
+    width: min(86vw, 720px);
+  }
+
+  .antenna-youtube {
+    width: min(86vw, 720px);
+    margin-top: 56px;
+  }
+
+  .antenna-meta {
+    grid-template-columns: minmax(0, 1fr) 128px 8vw;
+    column-gap: 48px;
+  }
+
+  .antenna-intro {
+    gap: 40px;
+  }
+
+  .antenna-storyboard {
+    width: min(72vw, 640px);
+  }
+
+  .antenna-ux-grid-2 {
+    gap: 24px;
+
+    figure {
+      width: 80%;
+    }
+  }
+
+  .antenna-exhibition {
+    width: min(92vw, 920px);
+    grid-template-columns: 1fr;
+  }
+
+  .antenna-exhibition-grid {
+    grid-template-rows: 260px 260px;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .antenna-page {
+    padding: 24px 0 72px;
+    background-size: 20px 20px;
+  }
+
+  .antenna-hero,
+  .antenna-intro,
+  .antenna-storyboard,
+  .antenna-ux,
+  .antenna-results {
+    width: calc(100% - 40px);
+  }
+
+  .antenna-heading {
+    margin-bottom: 40px;
+  }
+
+  .antenna-meta {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 0;
+    margin-top: 28px;
+  }
+
+  .antenna-meta__item {
+    gap: 6px;
+  }
+
+  .antenna-youtube {
+    width: calc(100% - 40px);
+    margin-top: 48px;
+  }
+
+  .antenna-intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .antenna-storyboard {
+    width: calc(100% - 40px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 48px;
+  }
+
+  .antenna-storyboard figure {
+    aspect-ratio: 4 / 3;
+  }
+
+  .antenna-storyboard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .antenna-ux {
+    margin-top: 48px;
+  }
+
+  .antenna-section-label {
+    margin-top: 48px;
+  }
+
+  .antenna-ux-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 40px;
+
+    figure {
+      width: 100%;
+      justify-self: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  .antenna-results {
+    margin-top: 48px;
+  }
+
+  .antenna-exhibition {
+    width: calc(100% - 40px);
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .antenna-exhibition-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 12px;
+  }
+
+  .antenna-exhibition-grid figure,
+  .antenna-exhibition-grid figure:nth-child(1),
+  .antenna-exhibition-grid figure:nth-child(2),
+  .antenna-exhibition-grid figure:nth-child(3),
+  .antenna-exhibition-grid figure:nth-child(4),
+  .antenna-exhibition-grid figure:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .antenna-exhibition-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

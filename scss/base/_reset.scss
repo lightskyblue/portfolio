@@ -1,0 +1,15 @@
+/* ================================
+   Reset
+   基础重置：避免不同浏览器默认样式影响布局
+================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}

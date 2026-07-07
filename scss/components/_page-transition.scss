@@ -1,0 +1,91 @@
+/* ================================
+   Page Transition
+   全站共用页面转场：鼠标位置方块扩展 / 新页面缩回
+================================ */
+
+.transition-block {
+  position: fixed;
+  z-index: 9999;
+
+  left: var(--transition-x, 50vw);
+  top: var(--transition-y, 50vh);
+
+  width: var(--grid-size);
+  height: var(--grid-size);
+
+  background: var(--color-blue);
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+
+  will-change: left, top, width, height, opacity;
+}
+
+/* Leave: mouse position small block → fullscreen blue mask */
+.transition-block.is-expanding {
+  animation: block-expand 420ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* Enter: keep the new page covered by a fullscreen blue mask first */
+.transition-block.is-fullscreen {
+  left: 50vw;
+  top: 50vh;
+  width: 120vw;
+  height: 120vh;
+  opacity: 1;
+}
+
+/* Enter: fullscreen blue mask → shrink back to the saved mouse position */
+.transition-block.is-fullscreen.is-shrinking {
+  animation: block-shrink 520ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes block-expand {
+  from {
+    left: var(--transition-x, 50vw);
+    top: var(--transition-y, 50vh);
+    width: var(--grid-size);
+    height: var(--grid-size);
+    opacity: 1;
+  }
+
+  to {
+    left: 50vw;
+    top: 50vh;
+    width: 120vw;
+    height: 120vh;
+    opacity: 1;
+  }
+}
+
+@keyframes block-shrink {
+  from {
+    left: 50vw;
+    top: 50vh;
+    width: 120vw;
+    height: 120vh;
+    opacity: 1;
+  }
+
+  to {
+    left: var(--transition-x, 50vw);
+    top: var(--transition-y, 50vh);
+    width: var(--grid-size);
+    height: var(--grid-size);
+    opacity: 0;
+  }
+}
+
+.is-entering-page .page-content {
+  opacity: 0;
+  transform: translateY(calc(var(--grid-size) * 0.45));
+}
+
+.page-content.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 520ms ease,
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}

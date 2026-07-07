@@ -1,0 +1,42 @@
+.back-to-top {
+  display: block;
+  width: calc(22% - 4rem);
+  max-width: none;
+
+  margin: 3rem auto 0;
+  padding: 1rem 1.5rem;
+
+  border: none;
+  border-radius: 0;
+
+  background: var(--color-blue);
+  color: var(--color-background);
+
+  font-family: inherit;
+  font-size: var(--small-text);
+  color: white;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-0.25rem);
+  background: var(--color-background);
+  color: var(--color-blue);
+  outline: 1px solid var(--color-blue);
+}
+
+/* 手机版暂时不用 */
+@media (max-width: 768px) {
+  .back-to-top {
+    display: none;
+  }
+}

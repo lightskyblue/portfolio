@@ -1,0 +1,65 @@
+/* ================================
+   Contact Button
+   全站共用组件：右上角 contact 按钮与 hover 动画
+================================ */
+
+.contact-button {
+  position: absolute;
+  top: calc(var(--grid-size) * 0.85);
+  right: calc(var(--grid-size) * 1.15);
+
+  width: var(--contact-size);
+  height: var(--contact-size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border: 1px solid var(--color-blue);
+  color: var(--color-bg);
+  font-size: calc(var(--grid-size) * 0.48);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+
+  transition: color var(--transition-slow);
+  pointer-events: auto;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: var(--color-blue);
+  transform: translateY(0);
+  transition: transform var(--transition-slow);
+}
+
+.contact-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button:hover {
+  color: var(--color-blue);
+}
+
+.contact-button:hover::before {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 900px) {
+  .contact-button {
+    top: var(--grid-size);
+    right: var(--grid-size);
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-button {
+    right: var(--grid-size);
+  }
+}

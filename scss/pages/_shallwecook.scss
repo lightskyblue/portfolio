@@ -1,0 +1,17 @@
+.shallwecook-storyboard {
+  display: grid;
+  margin-top: 64px;
+  figure {
+    margin: 0;
+    width: 70%;
+    justify-self: center;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}

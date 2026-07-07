@@ -1,0 +1,138 @@
+/* ================================
+   Home Page
+   index.html 专属：首页作品入口的自由排版
+================================ */
+
+.home-page {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.home-field {
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-entry {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  gap: calc(var(--grid-size) * 0.12);
+
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+
+  opacity: 0;
+  transform: translateY(calc(var(--grid-size) * 0.55));
+  animation: entry-rise 520ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: transform var(--transition-slow);
+}
+
+.home-entry:hover {
+  transform: translateY(calc(var(--grid-size) * -0.12));
+}
+
+.home-entry:hover .entry-index,
+.home-entry:hover .entry-title {
+  color: var(--color-blue);
+}
+
+.home-entry--ux {
+  left: calc(var(--grid-size) * 3.9);
+  top: calc(var(--grid-size) * 3.55);
+  animation-delay: 80ms;
+}
+
+.home-entry--photo {
+  left: calc(var(--grid-size) * 5.95);
+  top: calc(var(--grid-size) * 7.55);
+  animation-delay: 160ms;
+}
+
+.home-entry--graphic {
+  left: calc(var(--grid-size) * 13.95);
+  top: calc(var(--grid-size) * 5.55);
+  animation-delay: 240ms;
+}
+
+.home-entry--about {
+  left: calc(var(--grid-size) * 15.95);
+  top: calc(var(--grid-size) * 9.55);
+  animation-delay: 320ms;
+}
+
+.entry-index {
+  font-size: var(--small-text);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.entry-title {
+  font-size: var(--entry-title);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  transition: color var(--transition-fast);
+}
+
+.entry-desc {
+  display: none;
+}
+
+.home-note {
+  display: none;
+}
+
+@keyframes entry-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--grid-size) * 0.55));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-entry {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-page {
+    padding: calc(var(--grid-size) * 4) var(--grid-size) var(--grid-size);
+  }
+
+  .home-field {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-size) * 0.75);
+  }
+
+  .home-entry,
+  .home-entry--ux,
+  .home-entry--photo,
+  .home-entry--graphic,
+  .home-entry--about {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    padding: calc(var(--grid-size) * 0.45) 0;
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+  }
+
+  .home-entry:last-of-type {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+  }
+}

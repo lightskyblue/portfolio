@@ -1,0 +1,165 @@
+/* ================================
+   Category / Project Index Page
+   分类页共用：例如 ux-ui.html，未来也可用于 photography / graphic-design
+================================ */
+@use "../abstracts/variables" as *;
+.project-index-page {
+  background-color: var(--color-bg);
+  background-image: none;
+}
+
+.project-index-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.work-page {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+  padding: calc(var(--grid-size) * 3.2) calc(var(--grid-size) * 3.9)
+    calc(var(--grid-size) * 1.5);
+}
+
+.back-button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  color: var(--color-blue);
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+.back-button:hover {
+  transform: translateX(-6px);
+  color: var(--color-text);
+}
+
+.back-button:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 6px;
+}
+
+.work-hero h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: $font-size-hero;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+}
+
+.work-intro {
+  max-width: calc(var(--grid-size) * 8);
+  margin: calc(var(--grid-size) * 0.55) 0 0;
+  color: var(--color-muted);
+  font-size: var(--small-text);
+  line-height: 1.4;
+}
+
+.project-list {
+  position: relative;
+  width: min(760px, 100%);
+  margin-top: calc(var(--grid-size) * 1.8);
+}
+
+.project-row {
+  display: grid;
+  position: relative;
+  grid-template-columns: calc(var(--grid-size) * 1.1) 1fr;
+
+  padding: calc(var(--grid-size) * 0.35) 0;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-slow);
+}
+
+.project-preview {
+  position: fixed;
+
+  /* 位置：更靠上、更靠右 */
+  top: -15vh;
+  right: -18vw;
+
+  /* 尺寸：限制在一个稳定的方框里 */
+  width: clamp(300px, 28vw, 460px);
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+
+  pointer-events: none;
+  z-index: 20;
+
+  /* 方框视觉 */
+  display: block;
+  background: var(--color-bg);
+
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+
+  transition:
+    clip-path 560ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0ms linear 560ms;
+}
+
+.project-row:hover .project-preview {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+
+  transition:
+    clip-path 560ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0ms linear 0ms;
+}
+
+.project-row span {
+  font-size: var(--small-text);
+  font-weight: 400;
+}
+
+.project-row strong {
+  font-size: $font-size-display;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.project-row:hover {
+  color: var(--color-blue);
+  transform: translateX(calc(var(--grid-size) * 0.18));
+}
+
+@media (max-width: 900px) {
+  .work-page {
+    padding: calc(var(--grid-size) * 4) var(--grid-size) var(--grid-size);
+  }
+
+  .work-hero h1 {
+    font-size: clamp(3rem, 18vw, 6rem);
+  }
+
+  .project-list {
+    margin-top: calc(var(--grid-size) * 1.2);
+  }
+  .project-preview {
+    display: none;
+  }
+}
