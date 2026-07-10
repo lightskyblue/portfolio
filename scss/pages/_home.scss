@@ -129,10 +129,5 @@
     top: auto;
     width: 100%;
     padding: calc(var(--grid-size) * 0.45) 0;
-    border-top: 1px solid rgba(17, 17, 17, 0.18);
-  }
-
-  .home-entry:last-of-type {
-    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
   }
 }
