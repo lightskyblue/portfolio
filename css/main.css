@@ -576,7 +576,7 @@ a {
   animation-delay: 240ms;
 }
 
-.home-entry--about {
+.home-entry--video {
   left: calc(var(--grid-size) * 15.95);
   top: calc(var(--grid-size) * 9.55);
   animation-delay: 320ms;
@@ -638,7 +638,7 @@ a {
   .home-entry--ux,
   .home-entry--photo,
   .home-entry--graphic,
-  .home-entry--about {
+  .home-entry--video {
     position: relative;
     left: auto;
     top: auto;
